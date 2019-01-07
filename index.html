@@ -1,281 +1,167 @@
-<!DOCTYPE html>
-<html lang="en">
-
-  <head>
-
+<!doctype html>
+<html class="staticrypt-html">
+<head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <title>Protected Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Mariage de Sarah & Simon</title>
+    <!-- do not cache this page -->
+    <meta http-equiv="cache-control" content="max-age=0"/>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="expires" content="0"/>
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"/>
+    <meta http-equiv="pragma" content="no-cache"/>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .staticrypt-hr {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: 0;
+            border-top: 1px solid #eee;
+        }
 
-    <!-- Custom fonts for this template -->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-	<link href="https://fonts.googleapis.com/css?family=BenchNine|Dancing+Script|Indie+Flower|Pacifico|Gamja+Flower|Sacramento|Marck+Script" rel="stylesheet">
+        .staticrypt-page {
+            width: 360px;
+            padding: 8% 0 0;
+            margin: auto;
+            box-sizing: border-box;
+        }
 
-    <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+        .staticrypt-form {
+            position: relative;
+            z-index: 1;
+            background: #FFFFFF;
+            max-width: 360px;
+            margin: 0 auto 100px;
+            padding: 45px;
+            text-align: center;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+        }
 
-    <!-- Custom styles for this template -->
-    <link href="css/creative.min.css" rel="stylesheet">
+        .staticrypt-form input {
+            outline: 0;
+            background: #f2f2f2;
+            width: 100%;
+            border: 0;
+            margin: 0 0 15px;
+            padding: 15px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
 
-  </head>
+        .staticrypt-form .staticrypt-decrypt-button {
+            text-transform: uppercase;
+            outline: 0;
+            background: #4CAF50;
+            width: 100%;
+            border: 0;
+            padding: 15px;
+            color: #FFFFFF;
+            font-size: 14px;
+            cursor: pointer;
+        }
 
-  <body id="page-top">
+        .staticrypt-form .staticrypt-decrypt-button:hover, .staticrypt-form .staticrypt-decrypt-button:active, .staticrypt-form .staticrypt-decrypt-button:focus {
+            background: #43A047;
+        }
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top"><div style="font-family: 'BenchNine', serif;">Accueil - Mariage de Sarah & Simon</div></a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about"><div style="font-family: 'BenchNine', serif;">L'essentiel</div></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services"><div style="font-family: 'BenchNine', serif;">Lieu de l'évenement</div></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio"><div style="font-family: 'BenchNine', serif;">Voyage de noce</div></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact"><div style="font-family: 'BenchNine', serif;">Se loger </div></a>
-			  </li>
-          </ul>
+        .staticrypt-html {
+            height: 100%;
+        }
+
+        .staticrypt-body {
+            margin-bottom: 1em;
+            background: #76b852; /* fallback for old browsers */
+            background: -webkit-linear-gradient(right, #76b852, #8DC26F);
+            background: -moz-linear-gradient(right, #76b852, #8DC26F);
+            background: -o-linear-gradient(right, #76b852, #8DC26F);
+            background: linear-gradient(to left, #76b852, #8DC26F);
+            font-family: "Arial", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .staticrypt-instructions {
+            margin-top: -1em;
+            margin-bottom: 1em;
+        }
+
+        .staticrypt-title {
+            font-size: 1.5em;
+        }
+
+        .staticrypt-footer {
+            position: fixed;
+            height: 20px;
+            font-size: 16px;
+            padding: 2px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin-bottom: 0;
+        }
+
+        .staticrypt-footer p {
+            margin: 2px;
+            text-align: center;
+            float: right;
+        }
+
+        .staticrypt-footer a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body class="staticrypt-body">
+<div class="staticrypt-page">
+    <div class="staticrypt-form">
+        <div class="staticrypt-instructions">
+            <p class="staticrypt-title">Protected Page</p>
+            <p></p>
         </div>
-      </div>
-    </nav>
 
-    <header class="masthead text-center text-white d-flex">
-      <div class="container my-auto">
-        <div class="row">
-          <div class="col-lg-10 mx-auto">
-              <strong>
-			  	<div style="font-family: 'Dancing Script', serif;"><FONT size="10">Nous nous marions ! </FONT><br> <FONT size="6">Le 6 juillet 2019</FONT></br>
-				</div>
-			  </strong>
-          </div>
-          <div class="col-lg-6 mx-auto">
-            <p class="text-faded mb-5"><div style="font-family: 'Dancing Script', serif;"> <FONT size="5">Nous avons hâte de partager ce moment de bonheur avec vous tous</FONT></div></p>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about"><div style="font-family: 'BenchNine', serif;">L'essentiel</div></a>
-          </div>
-        </div>
-      </div>
-    </header>
+        <hr class="staticrypt-hr">
 
-    <section class="bg-primary" id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white"><div style="font-family: 'Dancing Script', serif;"> <FONT size="6">Nous nous retrouvons au nord de l'ardèche d'abord à Annonay pour la cérémonie puis à Verane dans un magnifique domaine en pierre en pleine nature.<br> <br>Vous pouvez amener votre tente, votre caravane ou encore votre camping-car pour dormir sur place ! Des douches sont à dispositions.</FONT></div></h2>
-            <hr class="light my-4">
-            <a class="btn btn-light btn-xl js-scroll-trigger" href="#services"><div style="font-family: 'BenchNine', serif;">Lieu de l'évenement</div></a>
-          </div>
-        </div>
-      </div>
-    </section>
+        <form id="staticrypt-form" action="#" method="post">
+            <input id="staticrypt-password"
+                   type="password"
+                   name="password"
+                   placeholder="passphrase"
+                   autofocus/>
 
-    <section id="services">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading"><div style="font-family: 'Dancing Script', serif;">Trois endroits magiques pour des milliers de moments inoubliables</div></h2>
-            <hr class="my-4">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fas fa-4x fa-building text-primary mb-3 sr-icon-1"></i>
-              <h3 class="mb-3"><div style="font-family: 'Dancing Script', serif;">La Mairie</div></h3>
-              <p class="text-muted mb-0"><div style="font-family: 'BenchNine', serif;"><FONT size="4">Marie d'Annonay<br>2 Rue de l'Hôtel de ville<br>07100 Annonay<br><br>Horaire: <br>14h30 </font></div></p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fas fa-4x fa-church text-primary mb-3 sr-icon-2"></i>
-              <h3 class="mb-3"><div style="font-family: 'Dancing Script', serif;">L'Église </div></h3>
-              <p class="text-muted mb-0"><div style="font-family: 'BenchNine', serif;"><FONT size="4">Église Saint-François<br>Place Saint-François<br>07100 Annonay<br><br>Horaire:<br>16h00</font></div></p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fas fa-4x fa-cocktail text-primary mb-3 sr-icon-3"></i>
-              <h3 class="mb-3"><div style="font-family: 'Dancing Script', serif;">La soirée </div></h3>
-              <p class="text-muted mb-0"><div style="font-family: 'BenchNine', serif;"><FONT size="4">Les Camiers<br>42520 VERANNE-MACLAS<br><br>Horaire:<br>18h30</font></div></p>
-            </div>
-          </div>
-		  <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fas fa-4x fa-comments text-primary mb-3 sr-icon-3"></i>
-              <h3 class="mb-3"><div style="font-family: 'Dancing Script', serif;">Le brunch</div></h3>
-              <p class="text-muted mb-0"><div style="font-family: 'BenchNine', serif;"><FONT size="4">Les Camiers<br>42520 VERANNE-MACLAS<br><br>Horaire:<br>midi</font></div></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+            <input type="submit" class="staticrypt-decrypt-button" value="DECRYPT"/>
+        </form>
+    </div>
 
-    <section class="p-0" id="portfolio">
-      <div class="container-fluid p-0">
-        <div class="row no-gutters popup-gallery">
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/1.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/1.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    CÔTES D'AZUR
-                  </div>
-                  <div class="project-name">
-                    Calanque de Cassis
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/2.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/2.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    ANGLETERRE
-                  </div>
-                  <div class="project-name">
-                   Ashbourne
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/3.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/3.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    BALI
-                  </div>
-                  <div class="project-name">
-                    Les rizières d'Ubud
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/4.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/4.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    BARCELONE
-                  </div>
-                  <div class="project-name">
-                    Petit déjeuner dans le quartier gothique
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/5.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/5.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    BALI
-                  </div>
-                  <div class="project-name">
-                   Sarah et les Balinais
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/6.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/6.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                   GILI AIR
-                  </div>
-                  <div class="project-name">
-                    Coucher de soleil inoubliable
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+</div>
+<footer class="staticrypt-footer">
+    <p class="pull-right">Created with <a href="https://robinmoisson.github.io/staticrypt">StatiCrypt</a></p>
+</footer>
 
-    <section class="bg-dark text-white">
-      <div class="container text-center">
-        <h2 class="mb-4"><div style="font-family: 'Dancing Script', serif;">Aidez nous à vivre de nouvelles aventures !<br><br> <Font size ="4"><div style="font-family: 'BenchNine', serif;">Nous sommes passionnés par la découverte de paysages, de cultures et de traditions. <br>Nous aimerions énormément partir au Canada et Hawaii.<br> Ce voyage serait pour pour nous le plus beau des cadeaux de mariage.</div></Font></h2>
-        <a class="btn btn-light btn-xl sr-button" href="http://startbootstrap.com/template-overviews/creative/"><div style="font-family: 'BenchNine', serif;">Cagnotte pour le voyage de noce</div></a>
-      </div>
-    </section>
 
-    <section id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading"><div style="font-family: 'Dancing Script', serif;">Logements & Gîtes</div></h2>
-            <hr class="my-4">
-          </div>
-        </div>
-       <p align = "center"><iframe src="https://www.google.com/maps/d/u/0/embed?mid=1qbG3lHJJAd1TE3kIMC8Wgi7Eg-RuIbLy" width="997" height="750"></iframe></p>
-	  </section>
-         <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading"><div style="font-family: 'Dancing Script', serif;">Pour nous contacter:</div></h2>
-            <hr class="my-4">
-            <p class="mb-5"><div style="font-family: 'BenchNine', serif;">Logements, organisations, questions diverses...</div></p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 ml-auto text-center">
-            <i class="fas fa-phone fa-3x mb-3 sr-contact-1"></i>
-            <p><div style="font-family: 'BenchNine', serif;">07-81-27-04-48</div></p>
-          </div>
-          <div class="col-lg-4 mr-auto text-center">
-            <i class="fas fa-envelope fa-3x mb-3 sr-contact-2"></i>
-            <p>
-              <a href="mailto:your-email@your-domain.com"><div style="font-family: 'BenchNine', serif;">Sarah+Simon@gmail.com</div></a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js" integrity="sha384-lp4k1VRKPU9eBnPePjnJ9M2RF3i7PC30gXs70+elCVfgwLwx1tv5+ctxdtwxqZa7" crossorigin="anonymous"></script>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.getElementById('staticrypt-form').addEventListener('submit', function(e) {
+        e.preventDefault();
 
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
-    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+        var passphrase = document.getElementById('staticrypt-password').value,
+            encryptedMsg = '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',
+            encryptedHMAC = encryptedMsg.substring(0, 64),
+            encryptedHTML = encryptedMsg.substring(64),
+            decryptedHMAC = CryptoJS.HmacSHA256(encryptedHTML, CryptoJS.SHA256(passphrase).toString()).toString();
 
-    <!-- Custom scripts for this template -->
-    <script src="js/creative.min.js"></script>
+        if (decryptedHMAC !== encryptedHMAC) {
+            alert('Bad passphrase!');
+            return;
+        }
 
-  </body>
+        var plainHTML = CryptoJS.AES.decrypt(encryptedHTML, passphrase).toString(CryptoJS.enc.Utf8);
 
+        document.write(plainHTML);
+        document.close();
+    });
+</script>
+</body>
 </html>
